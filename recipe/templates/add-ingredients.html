@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+{% block body %} 
+{% load crispy_forms_tags %}
+<section class="section-intro padding-y-sm">
+  <div class="container">
+    <h1>Add ingredients one by one</h1>
+    <div class="mt-5">
+      <form method="post" class="my-5">
+        {% csrf_token %} 
+        {{ form|crispy }}
+        <div class="d-flex justify-content-center align-items-center mt-3">
+          <button type="submit" class="btn btn-warning mx-3">Add</button>
+          <a href="{% url 'add_instructions' recipe_slug %}" class="btn btn-info mx-3">Add instructions -></a>
+        </div>
+      </form>
+      {% if success_message %}
+      <div class="alert alert-success" role="alert">
+        {{success_message}}
+      </div>
+      {% endif %}
+      {% if error_message %}
+      <div class="alert alert-danger" role="alert">
+        {{error_message}}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

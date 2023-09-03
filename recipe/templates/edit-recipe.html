@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block body %} 
+{% load crispy_forms_tags %}
+<section>
+    <div class="container">
+        <h1 class="text-warning">Update Your recipe</h1>
+
+        <div class="card">
+            <img class="card-img-top h-100 w-100 p-3" style="object-fit: cover;" src="{{recipe.image.url}}" alt="Card image cap">
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    {{recipe_form|crispy}}
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button type="submit" class="btn btn-warning">Update</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer d-flex justify-content-center align-items-center flex-nowrap">
+                <a href="{% url 'add_ingredients' recipe.slug %}" class="btn btn-primary w-100 mr-2">Add new ingredient</a>
+                <a href="{% url 'add_instructions' recipe.slug %}" class="btn btn-info w-100 ml-2">Add new instruction</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#id_recipe_name').on('input', function() {
+                // Get the value of the recipe_name input
+                var recipeName = $(this).val();
+
+                // Replace spaces with dashes and convert to lowercase for slug
+                var slug = recipeName.trim().toLowerCase().replace(/\s+/g, '-');
+
+                // Set the value of the slug input
+                $('#id_slug').val(slug);
+            });
+        });
+    </script>
+</section>
+{% endblock %}
