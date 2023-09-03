@@ -594,7 +594,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def register(request):\n    form = RegistrationForm()\n    if request.method == 'POST':\n        form = RegistrationForm(request.POST)\n        if form.is_valid():\n            existing_user = User.objects.filter(username=form.cleaned_data.get('username'))\n            if existing_user:\n                return render(request, 'register.html', {'form':form, 'message': \"User already exists.\"})\n            else:\n                user = form.save()",
+        "peekOfCode": "def register(request):\n    form = RegistrationForm()\n    if request.method == 'POST':\n        form = RegistrationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request, user)\n            return redirect('profile')\n    return render(request, 'register.html', {'form':form})\ndef user_login(request):",
         "detail": "account.views",
         "documentation": {}
     },

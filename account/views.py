@@ -12,14 +12,9 @@ def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            existing_user = User.objects.filter(username=form.cleaned_data.get('username'))
-            
-            if existing_user:
-                return render(request, 'register.html', {'form':form, 'message': "User already exists."})
-            else:
-                user = form.save()
-                login(request, user)
-                return redirect('profile')
+            user = form.save()
+            login(request, user)
+            return redirect('profile')
     return render(request, 'register.html', {'form':form})
 
 def user_login(request):
