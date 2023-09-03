@@ -990,7 +990,7 @@
         "kind": 5,
         "importPath": "taste_trove.settings",
         "description": "taste_trove.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# STATIC_ROOT = BASE_DIR / \"static\"\nSTATICFILES_DIRS = [\n    BASE_DIR/\"static\",",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\nSTATIC_ROOT = BASE_DIR / \"static\"\n# STATICFILES_DIRS = [\n#     BASE_DIR/\"static\",",
         "detail": "taste_trove.settings",
         "documentation": {}
     },
@@ -999,7 +999,7 @@
         "kind": 5,
         "importPath": "taste_trove.settings",
         "description": "taste_trove.settings",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# STATIC_ROOT = BASE_DIR / \"static\"\nSTATICFILES_DIRS = [\n    BASE_DIR/\"static\",\n]",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\nSTATIC_ROOT = BASE_DIR / \"static\"\n# STATICFILES_DIRS = [\n#     BASE_DIR/\"static\",\n# ]",
         "detail": "taste_trove.settings",
         "documentation": {}
     },
@@ -1008,7 +1008,7 @@
         "kind": 5,
         "importPath": "taste_trove.settings",
         "description": "taste_trove.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# STATIC_ROOT = BASE_DIR / \"static\"\nSTATICFILES_DIRS = [\n    BASE_DIR/\"static\",\n]\nMEDIA_URL = \"media/\"",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\nSTATIC_ROOT = BASE_DIR / \"static\"\n# STATICFILES_DIRS = [\n#     BASE_DIR/\"static\",\n# ]\nMEDIA_URL = \"media/\"",
         "detail": "taste_trove.settings",
         "documentation": {}
     },
@@ -1017,7 +1017,7 @@
         "kind": 5,
         "importPath": "taste_trove.settings",
         "description": "taste_trove.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# STATIC_ROOT = BASE_DIR / \"static\"\nSTATICFILES_DIRS = [\n    BASE_DIR/\"static\",\n]\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = BASE_DIR/\"media\"",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\nSTATIC_ROOT = BASE_DIR / \"static\"\n# STATICFILES_DIRS = [\n#     BASE_DIR/\"static\",\n# ]\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = BASE_DIR/\"media\"",
         "detail": "taste_trove.settings",
         "documentation": {}
     },
@@ -1026,16 +1026,16 @@
         "kind": 5,
         "importPath": "taste_trove.settings",
         "description": "taste_trove.settings",
-        "peekOfCode": "STATIC_URL = \"static/\"\n# STATIC_ROOT = BASE_DIR / \"static\"\nSTATICFILES_DIRS = [\n    BASE_DIR/\"static\",\n]\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = BASE_DIR/\"media\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATIC_URL = \"static/\"\nSTATIC_ROOT = BASE_DIR / \"static\"\n# STATICFILES_DIRS = [\n#     BASE_DIR/\"static\",\n# ]\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = BASE_DIR/\"media\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "taste_trove.settings",
         "documentation": {}
     },
     {
-        "label": "STATICFILES_DIRS",
+        "label": "STATIC_ROOT",
         "kind": 5,
         "importPath": "taste_trove.settings",
         "description": "taste_trove.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR/\"static\",\n]\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = BASE_DIR/\"media\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / \"static\"\n# STATICFILES_DIRS = [\n#     BASE_DIR/\"static\",\n# ]\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = BASE_DIR/\"media\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "taste_trove.settings",
         "documentation": {}
     },
